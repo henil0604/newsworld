@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Concert+One");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f3f3;
+  color: #272727;
+  font-family: concert one;
+}
+
+.newsCard {
+  width: 510px;
+  min-width: 350px;
+  max-width: 530px;
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  background: #ddd;
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px #00000070;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(125deg, #3498db, #34495e);
+  border-radius: 10px;
+}
+
+#newsCardImage {
+  max-height: 300px;
+}
+
+#toggleSettings {
+  /* border: 1px solid black; */
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 50%;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#toggleSettings:hover {
+  background-color: black;
+  color: white;
+}
+
+#toggleSettings:focus {
+  border: none;
+}
+
+#toogleSettingsSettingIcon:hover,
+#toogleSettingsSettingIcon:focus {
+  animation: toogleSettingsSettingIconSpin 1s linear infinite;
+}
+
+@keyframes toogleSettingsSettingIconSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* 
+@media only screen and (max-width: 600px) {
+  .newsCard {
+    min-width: 200px;
+    width: 350px;
+    max-width: 130px;
+    min-height: 500px;
+  }
+} */
